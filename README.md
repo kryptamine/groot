@@ -38,4 +38,36 @@ class HomeController
 ```bash
 composer require kryptamine/groot
 ```
+2. Use a supported adapter or implement [your own](#supported-adapters)
+
+## Usage example
+
+```php
+namespace Kryptamine\Groot;
+
+use Kryptamine\Groot\Router;
+use Bramus\Router\Router as BramusRouter;
+use Kryptamine\Groot\Adapters\BramusRouterAdapter;
+
+require 'vendor/autoload.php';
+
+$bramusRouter = new BramusRouter();
+
+$router = new Router(BramusRouterAdapter::fromBramusRouter($bramusRouter), [
+    HomeController::class,
+]);
+
+$router->register();
+
+$bramusRouter->run();
+```
+
+## Supported Adapters
+[Adapters List](https://github.com/kryptamine/groot/tree/main/src/Adapters)
+
+To create your own adapter, you should implement [RouteRegistrarAdapterInterface](https://github.com/kryptamine/groot/blob/main/src/Adapters/RouteRegistrarAdapterInterface.php)
+
+[bramus/router](https://github.com/bramus/router)
+
+[nikic/FastRoute](https://github.com/nikic/FastRoute)
 
