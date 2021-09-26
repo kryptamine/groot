@@ -63,11 +63,9 @@ $bramusRouter->run();
 ```
 
 ## Supported Adapters
-[Adapters List](https://github.com/kryptamine/groot/tree/main/src/Adapters)
-
-To create your own adapter, you should implement [RouteRegistrarAdapterInterface](https://github.com/kryptamine/groot/blob/main/src/Adapters/RouteRegistrarAdapterInterface.php)
-
 [bramus/router](https://github.com/bramus/router)
 
 [nikic/FastRoute](https://github.com/nikic/FastRoute)
+
+To create your own adapter, you should implement [RouteRegistrarAdapterInterface](https://github.com/kryptamine/groot/blob/main/src/Adapters/RouteRegistrarAdapterInterface.php)
 
