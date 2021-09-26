@@ -8,7 +8,7 @@ use Kryptamine\Groot\Attributes\Post;
 use Kryptamine\Groot\Attributes\Controller;
 
 #[Controller('users')]
-class HomeController
+class UserController
 {
     #[Get('/')]
     public function getUsers(): void
