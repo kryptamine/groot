@@ -54,7 +54,7 @@ require 'vendor/autoload.php';
 $bramusRouter = new BramusRouter();
 
 $router = new Router(BramusRouterAdapter::fromBramusRouter($bramusRouter), [
-    HomeController::class,
+    UserController::class,
 ]);
 
 $router->register();
